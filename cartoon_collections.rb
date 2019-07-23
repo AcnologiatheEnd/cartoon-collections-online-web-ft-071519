@@ -21,16 +21,7 @@ end
 
 def find_the_cheese(drray)
   cheese_types = ["cheddar", "gouda", "camembert"]
-   i = 0
-  empty = []
-  for e in drray
-    if e == cheese_types[i]
-      empty << e
-    end
-  end
-  if empty == []
-    return nil
-  else 
-    return empty[0]
-  end
+   drray.find do |la|
+ cheese_types.include?(la)
+ end
 end
